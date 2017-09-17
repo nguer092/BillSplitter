@@ -9,6 +9,9 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *billAmountTextField;
+@property (weak, nonatomic) IBOutlet UISlider *peopleSlider;
+@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 
 @end
 
@@ -19,11 +22,12 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)calculateSplitAmountButtonTapped:(UIButton *)sender {
+    float result = [_billAmountTextField.text floatValue] /_peopleSlider.value;
+    NSString *labelTotal = [NSString stringWithFormat:@"%f", result];
+    _resultLabel.text = labelTotal;
 }
+
 
 
 @end

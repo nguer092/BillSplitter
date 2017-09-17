@@ -22,20 +22,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YbY-ol-bN1">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the total bill amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YbY-ol-bN1">
                                 <rect key="frame" x="16" y="28" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fCa-ZD-L2D">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="2" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="fCa-ZD-L2D">
                                 <rect key="frame" x="14" y="85" width="347" height="31"/>
+                                <color key="minimumTrackTintColor" red="0.30340328420000001" green="0.74437585959999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="maximumTrackTintColor" red="0.22650906849999999" green="1" blue="0.1601090624" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="thumbTintColor" red="0.30340328420000001" green="0.74437585959999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKZ-Fn-0jc">
-                                <rect key="frame" x="164" y="144" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="153" y="144" width="71" height="30"/>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculateSplitAmountButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vuw-6Q-HRH"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijd-rO-7Q7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijd-rO-7Q7">
                                 <rect key="frame" x="16" y="198" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -44,8 +50,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="dKZ-Fn-0jc" secondAttribute="trailing" constant="149" id="8cI-M5-Jtu"/>
-                            <constraint firstItem="dKZ-Fn-0jc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="148" id="DBv-Vw-0Wf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dKZ-Fn-0jc" secondAttribute="trailing" constant="135" id="8cI-M5-Jtu"/>
+                            <constraint firstItem="dKZ-Fn-0jc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="137" id="DBv-Vw-0Wf"/>
                             <constraint firstItem="fCa-ZD-L2D" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="LAS-Ec-pyJ"/>
                             <constraint firstItem="YbY-ol-bN1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="OAW-aa-ACo"/>
                             <constraint firstItem="fCa-ZD-L2D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Vtg-yA-hpE"/>
@@ -58,6 +64,11 @@
                             <constraint firstItem="dKZ-Fn-0jc" firstAttribute="top" secondItem="fCa-ZD-L2D" secondAttribute="bottom" constant="29" id="zdo-Ty-du7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="billAmountTextField" destination="YbY-ol-bN1" id="7hf-ir-Xwe"/>
+                        <outlet property="peopleSlider" destination="fCa-ZD-L2D" id="Jrj-Eu-ShW"/>
+                        <outlet property="resultLabel" destination="ijd-rO-7Q7" id="1hO-sI-1xl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
