@@ -7,12 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "BillCalculator.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *billAmountTextField;
 @property (weak, nonatomic) IBOutlet UISlider *peopleSlider;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
-
 @end
 
 @implementation ViewController
@@ -23,9 +23,13 @@
 }
 
 - (IBAction)calculateSplitAmountButtonTapped:(UIButton *)sender {
-    float result = [_billAmountTextField.text floatValue] /_peopleSlider.value;
-    NSString *labelTotal = [NSString stringWithFormat:@"%f", result];
-    _resultLabel.text = labelTotal;
+//    float result = [_billAmountTextField.text floatValue] /_peopleSlider.value;
+//    NSString *labelTotal = [NSString stringWithFormat:@"%f", result];
+//    _resultLabel.text = labelTotal;
+    
+    BillCalculator *calc = [[BillCalculator alloc] init];
+    NSString *labelTotal = [calc calculateSplit:self.billAmountTextField.text numberOf:self.peopleSlider.value];
+    self.resultLabel.text = labelTotal;
 }
 
 

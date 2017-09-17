@@ -13,6 +13,7 @@
 		016C560B1F6DDE010049ABC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 016C56091F6DDE010049ABC3 /* Main.storyboard */; };
 		016C560D1F6DDE010049ABC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 016C560C1F6DDE010049ABC3 /* Assets.xcassets */; };
 		016C56101F6DDE010049ABC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 016C560E1F6DDE010049ABC3 /* LaunchScreen.storyboard */; };
+		016C56191F6DFAF40049ABC3 /* BillCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C56181F6DFAF40049ABC3 /* BillCalculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		016C560C1F6DDE010049ABC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		016C560F1F6DDE010049ABC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		016C56111F6DDE010049ABC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		016C56171F6DFAF40049ABC3 /* BillCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillCalculator.h; sourceTree = "<group>"; };
+		016C56181F6DFAF40049ABC3 /* BillCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillCalculator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +61,9 @@
 		016C55FF1F6DDE010049ABC3 /* Bill Splitter */ = {
 			isa = PBXGroup;
 			children = (
-				016C56031F6DDE010049ABC3 /* AppDelegate.h */,
-				016C56041F6DDE010049ABC3 /* AppDelegate.m */,
-				016C56061F6DDE010049ABC3 /* ViewController.h */,
-				016C56071F6DDE010049ABC3 /* ViewController.m */,
-				016C56091F6DDE010049ABC3 /* Main.storyboard */,
+				016C561C1F6DFB120049ABC3 /* Controller */,
+				016C561B1F6DFB080049ABC3 /* View */,
+				016C561A1F6DFAF90049ABC3 /* Model */,
 				016C56001F6DDE010049ABC3 /* Supporting Files */,
 			);
 			path = "Bill Splitter";
@@ -77,6 +78,34 @@
 				016C56011F6DDE010049ABC3 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		016C561A1F6DFAF90049ABC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				016C56171F6DFAF40049ABC3 /* BillCalculator.h */,
+				016C56181F6DFAF40049ABC3 /* BillCalculator.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		016C561B1F6DFB080049ABC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				016C56091F6DDE010049ABC3 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		016C561C1F6DFB120049ABC3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				016C56031F6DDE010049ABC3 /* AppDelegate.h */,
+				016C56041F6DDE010049ABC3 /* AppDelegate.m */,
+				016C56061F6DDE010049ABC3 /* ViewController.h */,
+				016C56071F6DDE010049ABC3 /* ViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				016C56191F6DFAF40049ABC3 /* BillCalculator.m in Sources */,
 				016C56081F6DDE010049ABC3 /* ViewController.m in Sources */,
 				016C56051F6DDE010049ABC3 /* AppDelegate.m in Sources */,
 				016C56021F6DDE010049ABC3 /* main.m in Sources */,
