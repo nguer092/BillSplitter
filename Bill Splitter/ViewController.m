@@ -23,10 +23,14 @@
 }
 
 - (IBAction)calculateSplitAmountButtonTapped:(UIButton *)sender {
+    
+//    Efficient 3 lines of code for entire app
 //    float result = [_billAmountTextField.text floatValue] /_peopleSlider.value;
 //    NSString *labelTotal = [NSString stringWithFormat:@"%f", result];
 //    _resultLabel.text = labelTotal;
     
+    
+//    MVC Design Pattern
     BillCalculator *calc = [[BillCalculator alloc] init];
     NSString *labelTotal = [calc calculateSplit:self.billAmountTextField.text numberOf:self.peopleSlider.value];
     self.resultLabel.text = labelTotal;
